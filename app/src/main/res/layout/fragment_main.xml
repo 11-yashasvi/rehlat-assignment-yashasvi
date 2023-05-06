@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+    android:id="@+id/head"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16dp"
+    android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Rehlat Assignment"
+    android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <ImageButton
+        android:id="@+id/date"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/baseline_date_range_24"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        app:layout_constraintBottom_toBottomOf="@+id/head"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        />
+    <ImageButton
+        android:id="@+id/price"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/baseline_price_change_24"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        app:layout_constraintBottom_toBottomOf="@+id/head"
+        app:layout_constraintRight_toLeftOf="@+id/date"
+        android:layout_marginRight="16dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+    <ProgressBar
+        android:id="@+id/pProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:indeterminateTintMode="src_in"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
